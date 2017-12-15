@@ -12,8 +12,10 @@ logger = logging.getLogger(__name__)
 from oozappa.config import get_config
 _settings = get_config()
 
+from oozappa import __version__
+from oozappa.run_jobset import run_jobset
 
-from oozappa import __version__, LogfileCommunicator, run_jobset
+from oozappa.log_communicator import LogfileCommunicator
 
 DEFAULT_OOZAPPA_PATH = '/tmp/oozappa'
 DEFAULT_OOZAPPA_DATAPATH = '{DEFAULT_OOZAPPA_PATH}/data.sqlite'.format(
