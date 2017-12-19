@@ -6,7 +6,6 @@ import logging
 import json
 from uuid import uuid4
 from datetime import datetime
-from records import get_db_session, Jobset, ExecuteLog
 
 logging.basicConfig(level=logging.INFO,
                     format='%(asctime)s %(levelname)s %(message)s')
@@ -107,6 +106,7 @@ class exec_fabric(object):
 
 
 def run_jobset(jobset_id, communicator, cli=False):
+    from records import get_db_session, Jobset, ExecuteLog
     session = get_db_session()
     jobset = session.query(Jobset).get(jobset_id)
     if jobset.cli_only and not cli:
