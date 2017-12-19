@@ -13,7 +13,8 @@ from oozappa.config import get_config
 _settings = get_config()
 
 
-from oozappa import __version__, LogfileCommunicator, run_jobset
+from oozappa import __version__, LogfileCommunicator
+from oozappa.run_jobset import run_jobset
 
 DEFAULT_OOZAPPA_PATH = '/tmp/oozappa'
 DEFAULT_OOZAPPA_DATAPATH = '{DEFAULT_OOZAPPA_PATH}/data.sqlite'.format(

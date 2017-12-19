@@ -4,7 +4,8 @@ import sys
 import json
 import urlparse
 
-from oozappa import exec_fabric, run_jobset as _run_jobset, LogWebsocketCommunicator
+from oozappa import exec_fabric, run_jobset as LogWebsocketCommunicator
+from oozappa.run_jobset import run_jobset as _run_jobset
 from oozappa.records import (Environment, Job, Jobset, JobsetJobList,
                              ExecuteLog, get_db_session, init as init_db)
 from oozappa.forms import EnvironmentForm, JobForm, JobSetForm
